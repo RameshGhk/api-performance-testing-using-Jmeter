@@ -49,7 +49,7 @@ jmeter -Jusername=<give username> -Jpassword=<give password> -Jvariables_from_cs
 ### 1. clone git repo : API Performance Testing
 ### 2. Build Docker image
 ```
-cd API Performance Testing/microservice1
+cd api-performance-testing/microservice-1
 docker build -t jmeter .
 ```
 ### 3. Run load test in docker container   
@@ -61,7 +61,7 @@ docker build -t jmeter .
 | variables                   | time in sec | Description |       
 | --------------------------  | ------------- | ------------ |       
 | env                         | staging  | Select env on which you want to run the test |  
-| calledid                    | tdup_sv_further | Select module for test |    
+| someparameter                    | param1 | give param for test |    
 | initial_threads             | 1  | Select number of concurrent users that you want to start with  |   
 | initial_threads_ramp_up     | 1  | Time in which all the initial concurrent users are up |  
 | initial_threads_duration    | 30 | The durstion of time you want to run the test for initial set of concurrent users  |  
@@ -75,12 +75,27 @@ docker build -t jmeter .
 
 ### Run Test
 ```
-cd API Performance Testing/microservice1
+cd api-performance-testing/microservice-1
 ./run.sh
 ```
 
 # Directory Tree structure
 ```
-API Performance Testing/
+api-performance-testing/
+├── example_load_test_scenario.PNG
+├── microservice-1
+│   ├── Dockerfile
+│   ├── launch.sh
+│   ├── reports
+│   │   ├── Failed_sessions_response_data_xxxx.xml
+│   │   ├── html_reports_xxxxx
+│   │   │   └── index.html
+│   │   ├── jmeter_xxxxx.log
+│   │   └── result_xxxxx.jtl
+│   ├── run.sh
+│   ├── scripts
+│   │   └── api_load_test.jmx
+│   └── udv.csv
+└── README.md
 
 ```
