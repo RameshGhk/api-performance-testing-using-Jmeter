@@ -1,0 +1,13 @@
+variables,time in sec
+env,dev
+parameter1,someparameter
+initial_threads,1
+initial_threads_ramp_up,1
+initial_threads_duration,10
+initial_threads_ramp_down,1
+final_threads,1
+final_threads_ramp_up,1
+final_threads_duration,20
+final_threads_ramp_down,1
+final_threads_initial_delay,10
+starting_session_id,1000
